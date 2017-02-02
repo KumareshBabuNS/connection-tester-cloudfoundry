@@ -2,7 +2,7 @@
 To validate if a certain external service is reachable from your Cloud Foundry instance, you normally would like to send a kind of `ping` from there. The easiest way to do so is [CF SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html).
 
 However, if your Ops admin disabled CF SSH, the Cloud Foundry Connection Tester becomes handy.  
-The tester can also be used in other clouds and remote servers, since it is written in Java and reads a [system property](https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html).
+The tester can also be used in other clouds and remote servers, since it is written in Java and reads [an environment variable](https://docs.oracle.com/javase/tutorial/essential/environment/env.html).
 
 ## Usage
 1. Download the app here.
