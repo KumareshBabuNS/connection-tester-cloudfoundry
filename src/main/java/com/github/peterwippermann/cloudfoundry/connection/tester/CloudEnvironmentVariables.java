@@ -5,11 +5,11 @@ public class CloudEnvironmentVariables {
 
 	public static String getVariable(String key) {
 		// Standard way to read from CF's environment variables
-		String property = System.getProperty(key);
-		return property;
+		String envVar = System.getenv(key);
+		return envVar;
 
 		// Debug option to read a JVM's command-line argument
-		// String cliArg = System.getenv(key);
+		// String cliArg = System.getProperty(key);
 		// return cliArg;
 	}
 
