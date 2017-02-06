@@ -7,7 +7,7 @@ The tester can also be used in other clouds and remote servers, since it is writ
 ## Usage
 1. Download the app [here](https://github.com/PeterWippermann/cloudfoundry-connection-tester/releases).
 2. Push it to the cloud:  
-```cf push connection-test --no-route --no-start -p cloudfoundry-connection-tester.jar -u none```
+```cf push connection-test --no-route --no-start -u none -p cloudfoundry-connection-tester.jar```
 3. Configure the target URL (without schema):  
 ```cf set-env connection-test URL "www.google.com:80"```
 4. Start the app:  
