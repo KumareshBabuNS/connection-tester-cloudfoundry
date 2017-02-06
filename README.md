@@ -44,3 +44,9 @@ Or you can monitor the log output live during the app's execution in a second te
 > ERR Connecting to "www.google.de:80" failed!  
 > OUT Exit status 0  
 
+## Why does the app crash?
+
+The Connection Tester exits normally after it tested the connection. It doesn't run any other background processes or keeps an HTTP endpoint open, so there is no need to keep running. This is signalled with exit code `0`.
+However, Cloud Foundry expects the app to keep on running forever - even if the health check has been disabled on purpose and no route has been set up. This is considered to be [a feature, not a bug](https://discuss.pivotal.io/hc/en-us/articles/230141447-My-app-has-crashed-how-do-I-interpret-the-crash-log-entry-):
+> Codependent step exited  
+> Your application has exited normally and has returned an exit code of 0.  This often happens when a program finishes it's execution and is complete.  While this may seem like a normal thing, apps that run on PWS should never finish.  A well behaved application should continue listen for HTTP requests or work indefinitely.  If you see this error, check for cases where your application might finish without any errors.
