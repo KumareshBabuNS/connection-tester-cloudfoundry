@@ -18,3 +18,28 @@ CF will report the app as *crashed* because it shuts itself down after the test.
 6. Find the test result in the logs:  
 ```cf logs connection-test --recent```
 
+## Understanding the test result
+
+Being a good 12-factor-app the Connection Tester prints its logs to Standard Out and Standard Error. You can display the most recent logs by using: ```cf logs connection-test --recent```
+Or you can monitor the log output live during the app's execution in a second terminal: ```cf logs connection-test``.
+
+### Successful connection
+
+> OUT Creating container
+> OUT Successfully created container
+> OUT Starting health monitoring of container
+> OUT Read URL from environment variables: "www.google.de:80"
+> OUT Trying to connect (timeout: 10000 milliseconds)...
+> OUT Connecting to "www.google.de:80" was successful!
+> OUT Exit status 0
+
+### Blocked connection
+
+> OUT Creating container
+> OUT Successfully created container
+> OUT Starting health monitoring of container
+> OUT Read URL from environment variables: "www.google.de:80"
+> OUT Trying to connect (timeout: 10000 milliseconds)...
+> ERR Connecting to "www.google.de:80" failed!
+> OUT Exit status 0
+
