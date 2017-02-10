@@ -1,4 +1,4 @@
-# A connection tester for Cloud Foundry
+# A connection tester for Cloud Foundry®
 To validate if an external service is reachable from your Cloud Foundry instance, you normally would like to send a kind of `ping` from there. The easiest way to do so is [CF SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html).
 
 However, if your Ops admin disabled CF SSH, the Connection Tester for Cloud Foundry becomes handy.  
@@ -50,3 +50,6 @@ The Connection Tester exits normally after it tested the connection. It doesn't 
 However, Cloud Foundry expects the app to keep on running forever - even if the health check has been disabled on purpose and no route has been set up. This is considered to be [a feature, not a bug](https://discuss.pivotal.io/hc/en-us/articles/230141447-My-app-has-crashed-how-do-I-interpret-the-crash-log-entry-):
 > **Codependent step exited**  
 > Your application has exited normally and has returned an exit code of 0.  This often happens when a program finishes it's execution and is complete.  While this may seem like a normal thing, apps that run on PWS should never finish.  A well behaved application should continue listen for HTTP requests or work indefinitely.  If you see this error, check for cases where your application might finish without any errors.
+
+# Attribution statement  
+CLOUD FOUNDRY is a trademark of the CloudFoundry.org Foundation in the United States and other countries.
