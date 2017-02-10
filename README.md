@@ -5,7 +5,7 @@ However, if your Ops admin disabled CF SSH, the Connection Tester for Cloud Foun
 The tester can also be used in other clouds and remote servers, since it is written in Java and reads [an environment variable](https://docs.oracle.com/javase/tutorial/essential/environment/env.html).
 
 ## Usage
-1. Download the app's .jar file from [here](https://github.com/PeterWippermann/cloudfoundry-connection-tester/releases).
+1. Download the app's .jar file from [here](https://github.com/PeterWippermann/connection-tester-cloudfoundry/releases).
 2. Push it to the cloud:  
 `cf push connection-test --no-route --no-start -u none -p connection-tester-cloudfoundry-1.0.0.jar`
 3. Configure the target URL (without schema):  
