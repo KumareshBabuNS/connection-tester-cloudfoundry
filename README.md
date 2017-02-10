@@ -51,5 +51,5 @@ However, Cloud Foundry expects the app to keep on running forever - even if the 
 > **Codependent step exited**  
 > Your application has exited normally and has returned an exit code of 0.  This often happens when a program finishes it's execution and is complete.  While this may seem like a normal thing, apps that run on PWS should never finish.  A well behaved application should continue listen for HTTP requests or work indefinitely.  If you see this error, check for cases where your application might finish without any errors.
 
-# Attribution statement  
+## Attribution statement  
 CLOUD FOUNDRY is a trademark of the CloudFoundry.org Foundation in the United States and other countries.
